@@ -20,7 +20,7 @@ namespace MSA_StudentSIMS.Models
         // fisrtName is required when adding a Student to the database, and it will have 100 characters max
         [Required, MaxLength(100)]
         public string firstName { get; set; }
-        public string midlleName { get; set; }
+        public string middleName { get; set; }
         [Required]
         public string lastName { get; set; }
         public string emailAddress { get; set; }
@@ -28,5 +28,7 @@ namespace MSA_StudentSIMS.Models
         // assign Timestamp type to the timeCreated attribute
         [Timestamp]
         public DateTime timeCreated { get; set; }
+
+        public ICollection<Address> addresses { get; set; }
     }
 }
