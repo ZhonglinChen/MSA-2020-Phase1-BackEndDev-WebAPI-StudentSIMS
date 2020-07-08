@@ -26,18 +26,21 @@ namespace MSA_StudentSIMS.Controllers
         public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
         {
 
-            return await _context.Student.Select(s => new Student
-            {
-                studentId = s.studentId,
-                firstName = s.firstName,
-                middleName = s.middleName,
-                lastName = s.lastName,
-                emailAddress = s.emailAddress,
-                phoneNumber = s.phoneNumber,
-                timeCreated = s.timeCreated,
-                addresses = _context.Address.Where(a => a.studentId == s.studentId).Select(a => a).ToList()
-            }).ToListAsync();
-            //var student
+            //return await _context.Student.Select(s => new Student
+            //{
+            //    studentId = s.studentId,
+            //    firstName = s.firstName,
+            //    middleName = s.middleName,
+            //    lastName = s.lastName,
+            //    emailAddress = s.emailAddress,
+            //    phoneNumber = s.phoneNumber,
+            //    timeCreated = s.timeCreated,
+            //    addresses = _context.Address.Where(a => a.studentId == s.studentId).Select(a => a).ToList()
+            //}).ToListAsync();
+
+            return  await _context.Student.Include(s => s.addresses).ToListAsync();
+
+         
         }
 
         // GET: api/Students/5
