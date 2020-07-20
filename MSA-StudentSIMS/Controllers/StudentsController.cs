@@ -25,6 +25,9 @@ namespace MSA_StudentSIMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
         {
+            /*
+             *  the functionality below in comment block is the same as the one-line code without comment
+             */
 
             //return await _context.Student.Select(s => new Student
             //{
