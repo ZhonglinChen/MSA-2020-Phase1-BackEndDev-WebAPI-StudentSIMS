@@ -16,7 +16,7 @@
 
 The screenshot shows the properties of Address Model. 
 
-![Annotation_AddressModel](.\Images\Annotation_AddressModel.png)
+![Annotation_AddressModel](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressModel.png)
 
 In this case,
 
@@ -30,7 +30,7 @@ In this case,
 
 The screenshot shows the properties of Student Model. 
 
-![Annotation_StudentModel](.\Images\Annotation_StudentModel.png)
+![Annotation_StudentModel](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentModel.png)
 
 In this case,
 
@@ -41,8 +41,8 @@ In this case,
 
 3. Showcases of data using Query editor for both tables with rows of example instances from Azure SQL Server.
 
-![Annotation_StudentSQLExample](.\Images\Annotation_StudentSQLExample.png)
+![Annotation_StudentSQLExample](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentSQLExample.png)
 
-![Annotation_AddressSQLExample](.\Images\Annotation_AddressSQLExample.png)
+![Annotation_AddressSQLExample](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressSQLExample.png)
 
 
