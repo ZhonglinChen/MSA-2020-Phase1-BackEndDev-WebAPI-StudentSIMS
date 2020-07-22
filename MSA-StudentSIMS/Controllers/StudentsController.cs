@@ -23,36 +23,16 @@ namespace MSA_StudentSIMS.Controllers
 
         // GET: api/Students
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-            /*
-             *  the functionality below in comment block is the same as the one-line code without comment
-             */
-
-            //return await _context.Student.Select(s => new Student
-            //{
-            //    studentId = s.studentId,
-            //    firstName = s.firstName,
-            //    middleName = s.middleName,
-            //    lastName = s.lastName,
-            //    emailAddress = s.emailAddress,
-            //    phoneNumber = s.phoneNumber,
-            //    timeCreated = s.timeCreated,
-            //    addresses = _context.Address.Where(a => a.studentId == s.studentId).Select(a => a).ToList()
-            //}).ToListAsync();
-
             return  await _context.Student.Include(s => s.addresses).ToListAsync();
-
-         
         }
 
         // GET: api/Students/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
-        {
-            //var student = await _context.Student.FindAsync(id);
+        { 
             var student = await _context.Student.Include(s => s.addresses).FirstOrDefaultAsync(i => i.studentId == id);
-
 
             if (student == null)
             {
@@ -75,8 +55,9 @@ namespace MSA_StudentSIMS.Controllers
         }
 
         // PUT: api/Students/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // This API **update** information excluding addresses for a student using studentId.
+        // Even if some additional addresses was contained in the JSON object of a student sent from client side, the update of addresses would be ignored.
+        // To change address of a student, use AddAddressForStudent, UpdateAddressForStudent, DeleteAddressForStudent
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, [Bind("studentId,firstName,middleName,lastName,emailAddress,phoneNumber,timeCreated")] Student student)
         {

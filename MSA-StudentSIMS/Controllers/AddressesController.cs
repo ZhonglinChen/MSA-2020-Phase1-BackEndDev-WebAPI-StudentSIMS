@@ -23,7 +23,7 @@ namespace MSA_StudentSIMS.Controllers
 
         // GET: api/Addresses
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Address>>> GetAddress()
+        public async Task<ActionResult<IEnumerable<Address>>> GetAddresses()
         {
             return await _context.Address.ToListAsync();
         }
