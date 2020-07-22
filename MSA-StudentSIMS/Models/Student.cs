@@ -9,6 +9,11 @@ namespace MSA_StudentSIMS.Models
 {
     public class Student
     {
+
+        public Student()
+        {
+            addresses = new HashSet<Address>();
+        }
         // annotate studentId to be the unique identifier of the Model which maps
         // to the primary key of the database
         [Key]
@@ -16,6 +21,7 @@ namespace MSA_StudentSIMS.Models
         // in this case, the studentId. DatabaseGeneratedOption.Identity means the value will only be
         // generated once when the row is first created, and it cannot be updated
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+  
         public int studentId { get; set; }
         // fisrtName is required when adding a Student to the database, and it will have 100 characters max
         [Required, MaxLength(100)]
@@ -29,6 +35,6 @@ namespace MSA_StudentSIMS.Models
         [Timestamp]
         public DateTime timeCreated { get; set; }
 
-        public ICollection<Address> addresses { get; set; }
+        public virtual ICollection<Address> addresses { get; set; }
     }
 }

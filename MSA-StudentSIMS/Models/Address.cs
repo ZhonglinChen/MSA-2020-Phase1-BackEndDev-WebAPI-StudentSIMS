@@ -21,6 +21,8 @@ namespace MSA_StudentSIMS.Models
 
         public string street { get; set; }
 
+        public string suburb { get; set; }
+
         public string city { get; set; }
 
         public int postcode { get; set; }

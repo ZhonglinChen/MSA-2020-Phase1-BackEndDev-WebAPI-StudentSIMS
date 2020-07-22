@@ -50,7 +50,9 @@ namespace MSA_StudentSIMS.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-            var student = await _context.Student.FindAsync(id);
+            //var student = await _context.Student.FindAsync(id);
+            var student = await _context.Student.Include(s => s.addresses).FirstOrDefaultAsync(i => i.studentId == id);
+
 
             if (student == null)
             {
@@ -58,38 +60,6 @@ namespace MSA_StudentSIMS.Controllers
             }
 
             return student;
-        }
-
-        // PUT: api/Students/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
-        {
-            if (id != student.studentId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(student).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StudentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Students
@@ -103,6 +73,89 @@ namespace MSA_StudentSIMS.Controllers
 
             return CreatedAtAction("GetStudent", new { id = student.studentId }, student);
         }
+
+        // PUT: api/Students/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutStudent(int id, [Bind("studentId,firstName,middleName,lastName,emailAddress,phoneNumber,timeCreated")] Student student)
+        {
+
+            if (id != student.studentId)
+            {
+                return BadRequest();
+            }
+
+            var existingStudent = _context.Student.Where(s => s.studentId == student.studentId).Include(s => s.addresses).SingleOrDefault();
+
+            if (existingStudent != null)
+            {
+                _context.Entry(existingStudent).CurrentValues.SetValues(student);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok();
+        }
+
+        [HttpPost("{studentId}/AddAddress")]
+        public async Task<IActionResult> AddAddressForStudent(int studentId,Address newAddress)
+        {
+            var existingStudent = _context.Student.Where(s => s.studentId == studentId).Include(s=> s.addresses).SingleOrDefault();
+
+            if (existingStudent != null)
+            {
+               existingStudent.addresses.Add(newAddress);
+               await _context.SaveChangesAsync();
+            }
+            else
+            {
+                return  NotFound("Student Id does not exist");
+            }
+
+
+            return Ok();
+        }
+
+        [HttpPut("{studentId}/{addressId}/UpdateAddress")]
+        public async Task<IActionResult> UpdateAddressForStudent(int studentId, int addressId, Address updatedAddress)
+        {
+
+            if(studentId!= updatedAddress.studentId || addressId != updatedAddress.addressId)
+            {
+                return BadRequest("please ensure consistency of studentId and addressId between API parameters and Address ");
+            }
+
+            var existingStudent = _context.Student.Where(s => s.studentId == studentId).Include(s=> s.addresses).SingleOrDefault();
+
+            if (existingStudent != null)
+            {
+                var existingAddress = existingStudent.addresses.Where(add => add.addressId == updatedAddress.addressId).SingleOrDefault();
+
+                if (existingAddress != null)
+                {
+                    _context.Entry(existingAddress).CurrentValues.SetValues(updatedAddress);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    return NotFound($"No address with addressId={updatedAddress.addressId} was found for stundent with studentId={studentId}");
+                }
+            }
+            else
+            {
+                return NotFound($"Student with studentId={studentId} does not exist");
+            }
+
+
+            return Ok($"Successfully update the address with addressId={updatedAddress.addressId} for student with studentId={studentId}  ");
+        }
+
+
+
 
         // DELETE: api/Students/5
         [HttpDelete("{id}")]
