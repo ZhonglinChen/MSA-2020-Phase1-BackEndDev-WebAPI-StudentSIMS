@@ -6,7 +6,7 @@ Here is the URL of my APIs that have been hosted on Azure: https://msa-projects-
 
 # 2. Explanation of code
 
-##	2.1 Database Update
+##	2.1 Database Create
 
 2.1.1 -> Create table named **Address** with attributes: `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country`. 
 
@@ -71,7 +71,7 @@ This API **updates** information excluding addresses for a student using student
 
 This means: *<u>Even if some additional addresses was contained in the JSON object of a student sent from client side, the update of addresses would be ignored.</u>*
 
-To change the address of a student using studentId, refer to <u>API method that **changes** the address of a student using his/her StudentId.</u>
+To change the address of a student using studentId, refer to <u>[API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-API-method-that-changes-the-address-of-a-student-using-his/her StudentId).</u>
 
 -------------
 
@@ -112,3 +112,20 @@ Meanwhile, this update cannot break the constraints between Student and Address 
 - Address: `Delete: api/addresses/:id` - `DeleteAddress(int id)`![Annotation_AddressControllerDeleteAddress](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerDeleteAddress.png)
 
 This API would **delete** a row of address from DB if a address with this id exists.
+
+------------
+
+### 2.2.2 API method that **adds** new address for a student using his/her StudentId
+
+
+
+### 2.2.3 API method that **changes** the address of a student using his/her StudentId.
+
+
+
+### 2.2.4 **Screenshot** of Swagger UI showing all API Endpoints
+
+- 
+
+
+
