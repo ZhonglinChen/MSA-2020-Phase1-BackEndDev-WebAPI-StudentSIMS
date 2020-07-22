@@ -71,7 +71,7 @@ This API **updates** information excluding addresses for a student using student
 
 This means: *<u>Even if some additional addresses was contained in the JSON object of a student sent from client side, the update of addresses would be ignored.</u>*
 
-To change the address of a student using studentId, refer to <u>[API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-API-method-that-changes-the-address-of-a-student-using-his/her StudentId).</u>
+To change the address of a student using studentId, refer to <u>[API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid).</u>
 
 -------------
 
