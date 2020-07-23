@@ -82,9 +82,15 @@ namespace MSA_StudentSIMS.Controllers
             return Ok();
         }
 
+
         [HttpPost("{studentId}/AddAddress")]
         public async Task<IActionResult> AddAddressForStudent(int studentId,Address newAddress)
         {
+            if (studentId != newAddress.studentId)
+            {
+                return BadRequest();
+            }
+
             var existingStudent = _context.Student.Where(s => s.studentId == studentId).Include(s=> s.addresses).SingleOrDefault();
 
             if (existingStudent != null)
@@ -96,7 +102,6 @@ namespace MSA_StudentSIMS.Controllers
             {
                 return  NotFound("Student Id does not exist");
             }
-
 
             return Ok();
         }

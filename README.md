@@ -1,3 +1,16 @@
+Todo:
+
+- [ ] Test `Put /api/Students/{id}` and `PUT /api/Students/{studentId}/{addressId}/UpdateAddress`
+- [ ] More Explanations in section of API Endpoints 
+- [ ] Complete missing response string for each API
+- [ ] Add Table of Contents
+
+- [ ] Update and Elaborate seed data 
+- [ ] **All screenshot synced**
+- [ ] **All Published**
+
+
+
 # 1. Azure Link
 
 Here is the URL of my APIs that have been hosted on Azure: https://msa-projects-phase1-schoolsims-webapi.azurewebsites.net/
@@ -153,3 +166,4 @@ This API would update a existing address for a existing student in the database.
 
 ### 2.2.4 **Screenshot** of Swagger UI showing all API Endpoints
 
+![Annotation_APIEndpointsAll](D:\Dev Folder\MSA Projects\MSA-StudentSIMS\Images\Annotation_APIEndpointsAll.png)
