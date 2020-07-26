@@ -1,7 +1,5 @@
 Todo:
 
-- [ ] More Explanations in section of API Endpoints 
-
 - [ ] Abstract and Table of Contents
 
   
@@ -171,6 +169,8 @@ This API would **delete** a row of address from DB if a address with this id exi
 
 The screenshot above shows the API method that adds a new address for a student using studentId. In this method, firstly, information of a student would be retrieved from database if a row of student with the given studentId exists in the Student Table. If the student exists, API will add a new address according to the received object from request for this student. Otherwise, return 404 NotFound to clients.
 
+![Annotation_StudentControllerAddAddressForStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerAddAddressForStudentSwagger.png)
+
 ### 2.2.3 API method that **changes** the address of a student using his/her StudentId.
 
 - StudentController : 
@@ -180,6 +180,8 @@ The screenshot above shows the API method that adds a new address for a student 
   ![Annotation_StudentControllerUpdateAddressForStudent](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerUpdateAddressForStudent.png)
 
 This API would update a existing address for a existing student in the database. In the method, BadRequest would be returned if studentId and addressId didn't match to those in the Address Object along with request. Then read data from database, if a student with the given studentId had a address with the given addressId, the address would be updated. Otherwise, response of NotFound will be returned.
+
+![Annotation_StudentControllerUpdateAddressForStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerUpdateAddressForStudentSwagger.png)
 
 ### 2.2.4 **Screenshot** of Swagger UI showing all API Endpoints
 
