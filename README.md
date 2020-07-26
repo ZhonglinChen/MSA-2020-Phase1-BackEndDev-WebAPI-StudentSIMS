@@ -1,10 +1,15 @@
 Todo:
 
 - [ ] More Explanations in section of API Endpoints 
+
 - [ ] Abstract and Table of Contents
-- [ ] **All screenshot synced**
-- [ ] **All Published**
+
+  
+
 - [ ] Double Check and Submit
+
+  - [ ] **All screenshot synced**
+  - [ ] **All Published**
 
 
 
@@ -74,13 +79,13 @@ In the Address Table as the above screenshot shows, rows of address information 
 
 ### 2.2.1 Basic CRUD requests for **Student** and Address table 
 
-- StudentController: 
-
-  `GET: api/Students` - `GetStudents()` 
+- ###### StudentController: `GET: api/Students` - `GetStudents()` 
 
   ![Annotation_StudentControllerGetStudents](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudents.png)
 
 To **read** information including addresses of all students , we use Linq query method **Include()** that would retrieve addresses for each student.
+
+![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)
 
 --------------
 
