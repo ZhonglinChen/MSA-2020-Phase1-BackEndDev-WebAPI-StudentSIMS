@@ -87,8 +87,6 @@ To **read** information including addresses of all students , we use Linq query 
 
 ![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)
 
-<br/>
-
 - #### StudentController: `GET: api/Students/:id` - `GetStudent(int id)`
 
 ![Annotation_StudentControllerGetStudentById](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentById.png)
@@ -97,8 +95,6 @@ This API **reads** information including addresses of a student using studentId.
 
 ![Annotation_StudentControllerGetStudentByIdSwagger](D:\Dev Folder\MSA Projects\MSA-StudentSIMS\Images\Annotation_StudentControllerGetStudentByIdSwagger.png)
 
-<br/>
-
 - #### StudentController: `POST: api/Students` - `PostStudent(Student student)`
 
   ![Annotation_StudentControllerPostStudent](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPostStudent.png)
@@ -106,8 +102,6 @@ This API **reads** information including addresses of a student using studentId.
 This API **creates** a new row of a student to DB by posting a new student object using JSON.
 
 ![Annotation_StudentControllerPostStudentSwagger](D:\Dev Folder\MSA Projects\MSA-StudentSIMS\Images\Annotation_StudentControllerPostStudentSwagger.png)
-
-<br/>
 
 - #### StudentController: `PUT: api/Students/:id` - `PostStudent(int id, [Bind("...")]Student student)`
 
@@ -121,15 +115,11 @@ To change the address of a student using studentId, refer to <u>[API method that
 
 ![Annotation_StudentControllerPutStudentSwagger](D:\Dev Folder\MSA Projects\MSA-StudentSIMS\Images\Annotation_StudentControllerPutStudentSwagger.png)
 
-<br/>
-
 - #### StudentController: `DELETE: api/Students/:id` - `DeleteStudent(int id)`
 
   ![Annotation_StudentControllerDeleteStudent](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerDeleteStudent.png)
 
 This API **deletes** a student using studentId if the student exists.
-
-<br/>
 
 - #### AddressController: `GET: api/Addresses` - `GetAddresses()` 
 
@@ -137,15 +127,13 @@ This API **deletes** a student using studentId if the student exists.
 
 This API **reads** all rows of address stored in the Address Table.
 
-<br/>
-
 - #### AddressController: `GET: api/addresses/:id` - `GetAddress(int id)`
 
   ![Annotation_AddressControllerGetAddressById](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerGetAddressById.png)
 
 This API **reads** a row of address using addressId if the address with the id exists.
 
-<br/>
+
 
 - #### AddressController: `Post: api/addresses` - `PostAddress(Address address)`
 
@@ -155,7 +143,7 @@ This API **creates** a row of address to DB when received a address object from 
 
 Meanwhile, a student with the studentId in the received object of Address have to exist in the Student table.
 
-<br/>
+
 
 - #### AddressController: `Put: api/addresses/:id` - `PutAddress(int id, Address address)`
 
@@ -165,15 +153,11 @@ This API would **update** a row of address to DB when received **addressId** and
 
 Meanwhile, this update cannot break the constraints between Student and Address table.
 
-<br/>
-
 - #### AddressController: `DELETE: api/addresses/:id` - `DeleteAddress(int id)`
 
   ![Annotation_AddressControllerDeleteAddress](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerDeleteAddress.png)
 
 This API would **delete** a row of address from DB if a address with this id exists.
-
-<br/>
 
 ### 2.2.2 API method that **adds** new address for a student using his/her StudentId
 
