@@ -91,7 +91,11 @@ To **read** information including addresses of all students , we use Linq query 
 
 This API **reads** information including addresses of a student using studentId.
 
-![Annotation_StudentControllerGetStudentByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentByIdSwagger.png)<hr/>
+![Annotation_StudentControllerGetStudentByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentByIdSwagger.png "Example of Swagger screenshot for GET: api/Students/:id")
+
+
+
+<hr/>
 
 - #### StudentController: `POST: api/Students` - `PostStudent(Student student)`
 
