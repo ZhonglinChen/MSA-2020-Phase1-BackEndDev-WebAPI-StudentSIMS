@@ -79,7 +79,7 @@ In the Address Table as the above screenshot shows, rows of address information 
 
 ### 2.2.1 Basic CRUD requests for **Student** and Address table 
 
-- ###### StudentController: `GET: api/Students` - `GetStudents()` 
+- #### StudentController: `GET: api/Students` - `GetStudents()` 
 
   ![Annotation_StudentControllerGetStudents](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudents.png)
 
@@ -87,13 +87,11 @@ To **read** information including addresses of all students , we use Linq query 
 
 ![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)
 
---------------
+<br/>
 
-- StudentController: 
+- #### StudentController: `GET: api/Students/:id` - `GetStudent(int id)`
 
-  `GET: api/Students/:id` - `GetStudent(int id)`
-
-  ![Annotation_StudentControllerGetStudentById](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentById.png)
+![Annotation_StudentControllerGetStudentById](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentById.png)
 
 This API **reads** information including addresses of a student using studentId.
 
