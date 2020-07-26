@@ -1,41 +1,32 @@
-Todo:
-
-- [ ] Abstract and Table of Contents
-
-  
-
-- [ ] Double Check and Submit
-
-  - [ ] **All screenshot synced**
-  - [ ] **All Published**
-
 # Description
 
+This repo is built to complete the assignment of [Back End Development](https://github.com/NZMSA/2020-Phase-1/tree/master/Databases%20and%20API) in [MSA2020 Phase1](https://github.com/NZMSA/2020-Phase-1).
 
+The following content contains the required docs according to the Back End Dev assignment.
 
 # Table of Content
 
-1. API Link
+1. [API Link](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#1-api-link)
 
-2. Explanations of code
+2. [Explanations of code](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#2-explanations-of-code)
 
-   2.1 Create Database 
+   2.1 [Create Database](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#21-database-create) 
 
-   ​	2.1.1 Create **Address** Table
+   ​	2.1.1 [Create **Address** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#211---create-table-named-address-with-attributes-studentid-street-number-street-suburb-city-postcode-and-country)
 
-   ​	2.1.2 Adapt **Student** Table
+   ​	2.1.2 [Adapt **Student** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#212---adapt-code-so-that-student-table-could-have-a-one-to-many-relationship-with-table-address)
 
-   ​	2.1.3 Showcases of Azure SQL DB 
+   ​	2.1.3 [Showcases of Azure SQL DB](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#213---showcases-of-data-using-query-editor-for-both-tables-with-rows-of-example-instances-from-azure-sql-server) 
 
-   2.2 API Implementations
+   2.2 [API Implementations](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#22-api-implementations)
 
-   ​	2.2.1 Basic CRUD requests for **Student** and **Address** table
+   ​	2.2.1 [Basic CRUD requests for **Student** and **Address** table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#221-basic-crud-requests-for-student-and-address-table)
 
-   ​	2.2.2 API method that **adds** new address for a student using his/her StudentId
+   ​	2.2.2 [API method that **adds** new address for a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid)
 
-   ​	2.2.3 API method that **changes** the address of a student using his/her StudentId
+   ​	2.2.3 [API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-api-method-that-changes-the-address-of-a-student-using-hisher-studentid)
 
-   ​	2.2.4 **Screenshot** of Swagger UI showing all API Endpoints
+   ​	2.2.4 [**Screenshot** of Swagger UI showing all API Endpoints](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#224-screenshot-of-swagger-ui-showing-all-api-endpoints)
 
 
 
@@ -65,7 +56,6 @@ In this case,
 
 - The studentId was set as Foreign Key of Address Model.
 
-  <br/>
 
 ### 2.1.2 -> Adapt code so that **Student** table could have a one-to-many relationship with table **Address**.
 
@@ -77,8 +67,6 @@ In this case,
 
 - Virtual collection of addresses was added to student model;
 - Initialise the collection of addresses in the constructor.
-
-<br/>
 
 ### 2.1.3 -> Showcases of data using Query editor for both tables with rows of example instances from Azure SQL Server.
 
