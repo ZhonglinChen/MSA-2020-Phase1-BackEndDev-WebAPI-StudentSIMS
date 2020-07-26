@@ -1,21 +1,22 @@
 Todo:
 
-- [ ] Test `Put /api/Students/{id}` and `PUT /api/Students/{studentId}/{addressId}/UpdateAddress`
 - [ ] More Explanations in section of API Endpoints 
-- [ ] Complete missing response string for each API
-- [ ] Add Table of Contents
-
-- [ ] Update and Elaborate seed data 
+- [ ] Abstract and Table of Contents
 - [ ] **All screenshot synced**
 - [ ] **All Published**
+- [ ] Double Check and Submit
+
+
 
 
 
 # 1. Azure Link
 
-Here is the URL of my APIs that have been hosted on Azure: https://msa-projects-phase1-schoolsims-webapi.azurewebsites.net/
+Here is the URL of my APIs that have been hosted on Azure:
 
+https://msa-projects-phase1-schoolsims-webapi.azurewebsites.net/
 
+<br/>
 
 # 2. Explanations of code
 
@@ -33,7 +34,7 @@ In this case,
 
 - The studentId was set as Foreign Key of Address Model.
 
-  
+  <br/>
 
 2.1.2 -> Adapt code so that **Student** table could have a one-to-many relationship with table **Address**.
 
@@ -46,15 +47,28 @@ In this case,
 - Virtual collection of addresses was added to student model;
 - Initialise the collection of addresses in the constructor.
 
-
+<br/>
 
 2.1.3 -> Showcases of data using Query editor for both tables with rows of example instances from Azure SQL Server.
 
 ![Annotation_StudentSQLExample](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentSQLExample.png)
 
+As shown in the screenshot, four rows of student information is stored in the Student Table. They are 'Zhonglin', 'Roy', 'Ken' and 'Tom' with studentId= 2, 3, 7, 14 respectively. 
+
+<br/>
+
 ![Annotation_AddressSQLExample](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressSQLExample.png)
 
+In the Address Table as the above screenshot shows, rows of address information are stored for students. There is a one-to-many( also could be one-to-zero) relationship between Student and Address, which just like the following table illustrates:
 
+| StudentId | FirstName | **Addresse**s                                                |
+| --------- | --------- | ------------------------------------------------------------ |
+| 2         | Zhonglin  | Address 1 (AddressId =1): 10 Queen St, Auckland, New Zealand, 1010 <br/>Address 2 (AddressId =3): 1 High ST, ACK, NZ, 0 <br/>Address 3 (AddressId =10): 1 a st, Auckland, New Zealand, 1234 |
+| 3         | Roy       | Address 1 (AddressId =2): 20 Symond St, Auckland, New Zealand, 1011 |
+| 7         | Ken       | Address 1 (AddressId =5): 67 Thistle Street, Te Awa, Napier, NZ, 4110<br/>Address 2 (AddressId =6): 57 Palm Springs Boulevard, Papamoa Beach, Tauranga, 3118, 0 |
+| 14        | Tom       | Empty                                                        |
+
+<br/>
 
 ## 2.2 API Implementations
 
