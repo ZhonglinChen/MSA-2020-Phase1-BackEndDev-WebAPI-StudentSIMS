@@ -83,7 +83,11 @@ In the Address Table as the above screenshot shows, rows of address information 
 
 To **read** information including addresses of all students , we use Linq query method **Include()** that would retrieve addresses for each student.
 
-![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)<hr/>
+![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)
+
+<p style="text-align: center;"> (Example of the Swagger screenshots)</p>
+
+<hr/>
 
 - #### StudentController: `GET: api/Students/:id` - `GetStudent(int id)`
 
@@ -91,9 +95,9 @@ To **read** information including addresses of all students , we use Linq query 
 
 This API **reads** information including addresses of a student using studentId.
 
-![Annotation_StudentControllerGetStudentByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentByIdSwagger.png "Example of Swagger screenshot for GET: api/Students/:id")
+![Annotation_StudentControllerGetStudentByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentByIdSwagger.png)
 
-
+<p style="text-align: center;"> (Example of the Swagger screenshots)</p>
 
 <hr/>
 
@@ -103,7 +107,10 @@ This API **reads** information including addresses of a student using studentId.
 
 This API **creates** a new row of a student to DB by posting a new student object using JSON.
 
-![Annotation_StudentControllerPostStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPostStudentSwagger.png)<hr/>
+![Annotation_StudentControllerPostStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPostStudentSwagger.png)
+
+<p style="text-align: center;"> (Example of the Swagger screenshots)</p>
+<hr/>
 
 - #### StudentController: `PUT: api/Students/:id` - `PostStudent(int id, [Bind("...")]Student student)`
 
@@ -115,7 +122,11 @@ This means: *<u>Even if some additional addresses was contained in the JSON obje
 
 To change the address of a student using studentId, refer to <u>[API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid).</u>
 
-![Annotation_StudentControllerPutStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPutStudentSwagger.png)<hr/>
+![Annotation_StudentControllerPutStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPutStudentSwagger.png)
+
+<p style="text-align: center;"> (Example of the Swagger screenshots)</p>
+
+<hr/>
 
 - #### StudentController: `DELETE: api/Students/:id` - `DeleteStudent(int id)`
 
@@ -123,7 +134,11 @@ To change the address of a student using studentId, refer to <u>[API method that
 
 This API **deletes** a student using studentId if the student exists.
 
-![Annotation_StudentControllerDeleteStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerDeleteStudentSwagger.png)<hr/>
+![Annotation_StudentControllerDeleteStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerDeleteStudentSwagger.png)
+
+<p style="text-align: center;"> (Example of the Swagger screenshots)</p>
+
+<hr/>
 
 - #### AddressController: `GET: api/Addresses` - `GetAddresses()` 
 
