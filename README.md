@@ -12,21 +12,21 @@ The following content contains the required docs according to the Back End Dev a
 
    2.1 [Create Database](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#21-database-create) 
 
-   ​	2.1.1 [Create **Address** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#211---create-table-named-address-with-attributes-studentid-street-number-street-suburb-city-postcode-and-country)
+   ​		2.1.1 [Create **Address** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#211---create-table-named-address-with-attributes-studentid-street-number-street-suburb-city-postcode-and-country)
 
-   ​	2.1.2 [Adapt **Student** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#212---adapt-code-so-that-student-table-could-have-a-one-to-many-relationship-with-table-address)
+   ​		2.1.2 [Adapt **Student** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#212---adapt-code-so-that-student-table-could-have-a-one-to-many-relationship-with-table-address)
 
-   ​	2.1.3 [Showcases of Azure SQL DB](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#213---showcases-of-data-using-query-editor-for-both-tables-with-rows-of-example-instances-from-azure-sql-server) 
+   ​		2.1.3 [Showcases of Azure SQL DB](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#213---showcases-of-data-using-query-editor-for-both-tables-with-rows-of-example-instances-from-azure-sql-server) 
 
    2.2 [API Implementations](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#22-api-implementations)
 
-   ​	2.2.1 [Basic CRUD requests for **Student** and **Address** table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#221-basic-crud-requests-for-student-and-address-table)
+   ​		2.2.1 [Basic CRUD requests for **Student** and **Address** table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#221-basic-crud-requests-for-student-and-address-table)
 
-   ​	2.2.2 [API method that **adds** new address for a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid)
+   ​		2.2.2 [API method that **adds** new address for a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid)
 
-   ​	2.2.3 [API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-api-method-that-changes-the-address-of-a-student-using-hisher-studentid)
+   ​		2.2.3 [API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-api-method-that-changes-the-address-of-a-student-using-hisher-studentid)
 
-   ​	2.2.4 [**Screenshot** of Swagger UI showing all API Endpoints](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#224-screenshot-of-swagger-ui-showing-all-api-endpoints)
+   ​		2.2.4 [**Screenshot** of Swagger UI showing all API Endpoints](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#224-screenshot-of-swagger-ui-showing-all-api-endpoints)
 
 
 
