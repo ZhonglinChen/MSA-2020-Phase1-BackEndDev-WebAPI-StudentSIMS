@@ -12,21 +12,21 @@ The following content contains the required docs according to the Back End Dev a
 
    2.1 [Create Database](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#21-database-create) 
 
-   ​		2.1.1 [Create **Address** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#211---create-table-named-address-with-attributes-studentid-street-number-street-suburb-city-postcode-and-country)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 [Create **Address** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#211---create-table-named-address-with-attributes-studentid-street-number-street-suburb-city-postcode-and-country)
 
-   ​		2.1.2 [Adapt **Student** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#212---adapt-code-so-that-student-table-could-have-a-one-to-many-relationship-with-table-address)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.2 [Adapt **Student** Table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#212---adapt-code-so-that-student-table-could-have-a-one-to-many-relationship-with-table-address)
 
-   ​		2.1.3 [Showcases of Azure SQL DB](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#213---showcases-of-data-using-query-editor-for-both-tables-with-rows-of-example-instances-from-azure-sql-server) 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.3 [Showcases of Azure SQL DB](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#213---showcases-of-data-using-query-editor-for-both-tables-with-rows-of-example-instances-from-azure-sql-server) 
 
    2.2 [API Implementations](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#22-api-implementations)
 
-   ​		2.2.1 [Basic CRUD requests for **Student** and **Address** table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#221-basic-crud-requests-for-student-and-address-table)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.1 [Basic CRUD requests for **Student** and **Address** table](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#221-basic-crud-requests-for-student-and-address-table)
 
-   ​		2.2.2 [API method that **adds** new address for a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.2 [API method that **adds** new address for a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid)
 
-   ​		2.2.3 [API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-api-method-that-changes-the-address-of-a-student-using-hisher-studentid)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.3 [API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#223-api-method-that-changes-the-address-of-a-student-using-hisher-studentid)
 
-   ​		2.2.4 [**Screenshot** of Swagger UI showing all API Endpoints](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#224-screenshot-of-swagger-ui-showing-all-api-endpoints)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.4 [**Screenshot** of Swagger UI showing all API Endpoints](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#224-screenshot-of-swagger-ui-showing-all-api-endpoints)
 
 
 
@@ -99,7 +99,7 @@ In the Address Table as the above screenshot shows, rows of address information 
   
   To **read** information including addresses of all students , we use Linq query method **Include()** that would retrieve addresses for each student.
 
-Example of the Swagger screenshots: 
+Example of the Swagger screenshot of **Read All** manipulation: 
 
 ![Annotation_StudentControllerGetStudentsSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentsSwagger.png)
 
@@ -113,7 +113,7 @@ Example of the Swagger screenshots:
 
 ​	This API **reads** information including addresses of a student using studentId.
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot of **Read** manipulation:
 
 ![Annotation_StudentControllerGetStudentByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerGetStudentByIdSwagger.png)
 
@@ -127,7 +127,7 @@ Example of the Swagger screenshots:
   
   This API **creates** a new row of a student to DB by posting a new student object using JSON.
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot of **Create** manipulation:
 
 ![Annotation_StudentControllerPostStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPostStudentSwagger.png)
 
@@ -144,7 +144,7 @@ Example of the Swagger screenshots:
   
   To change the address of a student using studentId, refer to <u>[API method that **changes** the address of a student using his/her StudentId](https://github.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS#222-api-method-that-adds-new-address-for-a-student-using-hisher-studentid).</u>
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot of **Update** manipulation:
 
 ![Annotation_StudentControllerPutStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerPutStudentSwagger.png)
 
@@ -158,7 +158,7 @@ Example of the Swagger screenshots:
   
   This API **deletes** a student using studentId if the student exists.
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot of **Delete** manipulation:
 
 ![Annotation_StudentControllerDeleteStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerDeleteStudentSwagger.png)
 
@@ -173,14 +173,20 @@ Following lists methods in AddressController, screenshots are similar to those a
   ![Annotation_AddressControllerGetAddresses](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerGetAddresses.png)
   
   This API **reads** all rows of address stored in the Address Table.
-  
+
+Example of the Swagger screenshot of **Read All** manipulation: 
+
+![Annotation_AddressControllerGetAddressesSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerGetAddressesSwagger.png)
+
 - #### AddressController: `GET: api/addresses/:id` - `GetAddress(int id)`
 
   ![Annotation_AddressControllerGetAddressById](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerGetAddressById.png)
 
   This API **reads** a row of address using addressId if the address with the id exists.
 
+Example of the Swagger screenshot of **Read** manipulation: 
 
+![Annotation_AddressControllerGetAddressByIdSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerGetAddressByIdSwagger.png)
 
 - #### AddressController: `Post: api/addresses` - `PostAddress(Address address)`
 
@@ -190,7 +196,9 @@ Following lists methods in AddressController, screenshots are similar to those a
   
   Meanwhile, a student with the studentId in the received object of Address have to exist in the Student table.
 
+Example of the Swagger screenshot of **Create** manipulation: 
 
+![Annotation_AddressControllerPostAddressSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerPostAddressSwagger.png)
 
 - #### AddressController: `Put: api/addresses/:id` - `PutAddress(int id, Address address)`
 
@@ -199,12 +207,20 @@ Following lists methods in AddressController, screenshots are similar to those a
   This API would **update** a row of address to DB when received **addressId** and a **address object** that contains the same **addressId** from client side.
   
   Meanwhile, this update cannot break the constraints between Student and Address table.
-  
+
+Example of the Swagger screenshot of **Update** manipulation: 
+
+![Annotation_AddressControllerPutAddressSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerPutAddressSwagger.png)
+
 - #### AddressController: `DELETE: api/addresses/:id` - `DeleteAddress(int id)`
 
   ![Annotation_AddressControllerDeleteAddress](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerDeleteAddress.png)
 
   This API would **delete** a row of address from DB if a address with this id exists.
+
+Example of the Swagger screenshot of **Delete** manipulation: 
+
+![Annotation_AddressControllerDeleteAddressSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_AddressControllerDeleteAddressSwagger.png)
 
 ### 2.2.2 API method that **adds** new address for a student using his/her StudentId
 
@@ -216,7 +232,7 @@ Following lists methods in AddressController, screenshots are similar to those a
   
   The screenshot above shows the API method that adds a new address for a student using studentId. In this method, firstly, information of a student would be retrieved from database if a row of student with the given studentId exists in the Student Table. If the student exists, API will add a new address according to the received object from request for this student. Otherwise, return 404 NotFound to clients.
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot for this method:
 
 ![Annotation_StudentControllerAddAddressForStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerAddAddressForStudentSwagger.png)
 
@@ -230,7 +246,7 @@ Example of the Swagger screenshots:
   
   This API would update a existing address for a existing student in the database. In the method, BadRequest would be returned if studentId and addressId didn't match to those in the Address Object along with request. Then read data from database, if a student with the given studentId had a address with the given addressId, the address would be updated. Otherwise, response of NotFound will be returned.
 
-Example of the Swagger screenshots:
+Example of the Swagger screenshot for this method:
 
 ![Annotation_StudentControllerUpdateAddressForStudentSwagger](https://raw.githubusercontent.com/ZhonglinChen/MSA-2020-Phase1-BackEndDev-WebAPI-StudentSIMS/master/Images/Annotation_StudentControllerUpdateAddressForStudentSwagger.png)
 
